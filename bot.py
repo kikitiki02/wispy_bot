@@ -20,7 +20,20 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send("Pong! <3")
+    await ctx.send("🏓 pong!! 💕")
+
+@bot.event
+async def on_message(message):
+    if message.author.bot:
+        return
+    if "hi" in message.content.lower():
+        await message.channel.send("You're mad loud gang")
+    if "sad" in message.content.lower():
+        await message.channel.send("aw nooo 🥺 I'm here for you 🤍....nah im just playin. Get it together")
+    if "lipi" in message.content.lower():
+        await message.channel.send("Lipi? He's stinky.")
+    await bot.process_commands(message)
+
 
 async def setup_hook():
     await bot.load_extension("cogs.tiktok")
