@@ -22,4 +22,9 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send("Pong! <3")
 
+async def setup_hook():
+    await bot.load_extension("cogs.tiktok")
+
+bot.setup_hook = setup_hook
+
 bot.run(TOKEN)
