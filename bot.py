@@ -26,12 +26,23 @@ async def ping(ctx):
 async def on_message(message):
     if message.author.bot:
         return
-    if "hi" in message.content.lower():
+    if "hi" in message.content.lower().split():
         await message.channel.send("You're mad loud gang")
     if "sad" in message.content.lower():
         await message.channel.send("aw nooo 🥺 I'm here for you 🤍....nah im just playin. Get it together")
     if "lipi" in message.content.lower():
         await message.channel.send("Lipi? He's stinky.")
+    if "cod" in message.content.lower().split():
+        await message.channel.send("PEEE YUUUU ONION BOY")
+    if "rl" in message.content.lower().split():
+        await message.channel.send("are you serious....?")
+    if "novo" in message.content.lower():
+        await message.channel.send("OI we SUCKIN WEENIEs MATE")
+    if "allie" in message.content.lower():
+        await message.channel.send("HEY QUEEN LUV YA")
+    if "kiki" in message.content.lower():
+        await message.channel.send("Kiki is the most amazing person ever and she's my mutha")
+        
     await bot.process_commands(message)
 
 
