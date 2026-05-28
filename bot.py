@@ -26,7 +26,7 @@ async def ping(ctx):
 async def on_message(message):
     if message.author.bot:
         return
-    if "Hi" in message.content.lower():
+    if "hi" in message.content.lower():
         await message.channel.send("You're mad loud gang")
     if "sad" in message.content.lower():
         await message.channel.send("aw nooo 🥺 I'm here for you 🤍....nah im just playin. Get it together")
